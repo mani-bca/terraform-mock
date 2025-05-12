@@ -1,8 +1,13 @@
-variable "scp_policy" {
-  type = string
+variable "org_feature_set" {
+  type    = string
+  default = "ALL"
 }
 
-variable "accounts" {
+variable "organizational_units" {
+  type = list(string)
+}
+
+variable "member_accounts" {
   type = list(object({
     name    = string
     email   = string
@@ -12,6 +17,6 @@ variable "accounts" {
   }))
 }
 
-variable "organizational_units" {
-  type = list(string)
+variable "scp_policy" {
+  type = string
 }
