@@ -20,3 +20,6 @@ variable "member_accounts" {
 variable "scp_policy" {
   type = string
 }
+variable "root_account_email" {
+type = string
+}
